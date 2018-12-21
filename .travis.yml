@@ -1,9 +1,2 @@
-dist: trusty
-
-addons:
-  sonarcloud:
-    organization: "your-sonar-organization-name" # To find your organization, go to: https://sonarcloud.io/account/organizations
-
-script:
-  # Put before sonar-scanner your other script steps
-  - sonar-scanner -Dsonar.verbose=true -X
+language: java
+mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
